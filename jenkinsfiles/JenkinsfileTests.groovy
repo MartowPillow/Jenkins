@@ -7,7 +7,6 @@ pipeline {
 
     options {
         timeout(time: 25, unit: 'MINUTES')
-        skipDefaultCheckout true
     }
 
     stages {

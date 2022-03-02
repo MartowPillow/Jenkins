@@ -1,0 +1,1 @@
+C:\Users\tomyr\Desktop\Cours\Jenkins\src\tests\tests\x64\Debug\tests.vcxproj.CopyComplete

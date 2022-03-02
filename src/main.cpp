@@ -1,8 +1,11 @@
 #include <iostream>
 
 int main(){
-
-    std::cout << "Hello World!" << '\n';
+   
+    int x = 5;
+    int y = 0;
+	
+    std::cout << "Hello " << x/y << "World!" << 'oups\n';
 
     return 0;
 }

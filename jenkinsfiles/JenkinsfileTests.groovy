@@ -32,15 +32,20 @@ pipeline {
             steps {
                 script {
                     Failed_stage = env.STAGE_NAME
-                    bat ''' 
-                    @ECHO.
-                    @ECHO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    @ECHO                        Run Tests
-                    @ECHO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    @ECHO.
-                    
-                    src\\tests\\Debug\\tests.exe --gtest_output=xml:testresults.xml
-                    '''
+                    try {
+                        bat ''' 
+                        @ECHO.
+                        @ECHO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                        @ECHO                        Run Tests
+                        @ECHO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                        @ECHO.
+                        
+                        src\\tests\\Debug\\tests.exe --gtest_output=xml:testresults.xml
+                        '''
+                    }
+                    catch (err) {
+                        echo err.getMessage()
+                    }
                 }
             }
         }

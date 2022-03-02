@@ -23,7 +23,7 @@ pipeline {
                     @ECHO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     @ECHO.
 
-                    msbuild src\tests\tests.sln
+                    msbuild src\\tests\\tests.sln
                     '''                    
                 }
             }
@@ -40,7 +40,7 @@ pipeline {
                     @ECHO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     @ECHO.
                     
-                    src\tests\Debug\tests.exe --gtest_output=xml:testresults.xml
+                    src\\tests\\Debug\\tests.exe --gtest_output=xml:testresults.xml
                     '''
                 }
             }
